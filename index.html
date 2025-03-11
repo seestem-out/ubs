@@ -1,0 +1,633 @@
+<!DOCTYPE html><head lang="en"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><meta http-equiv="X-UA-Compatible" content="ie=edge"><link rel="stylesheet" href="css/vendor/spectre.min.css"><link rel="stylesheet" href="css/vendor/spectre-exp.min.css"><link rel="stylesheet" href="css/vendor/spectre-icons.min.css"><link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></link><title>United By Skateboarding</title><style>
+@font-face {
+  font-family: 'Univers-Regular';
+  src: URL('fonts/UniversRegular.ttf') format('truetype');
+}
+body{
+  padding: 1em 8em
+}
+
+#ServicesContentWidget, #HEROHEADING {
+background: #fc4a1a;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #f7b733, #fc4a1a);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #f7b733, #fc4a1a); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+#ServicesContentWidget .card{
+  background: transparent !important;
+}
+
+@media only screen and (max-width: 900px){
+  body{
+    padding: 1em
+  }
+
+}
+
+#HERO{
+  height: 60vh !important;
+  background-position: center bottom !important;
+}
+
+#HEROHEADING{
+  width: 45%;
+  text-align: center;
+}
+
+#HEROSUBHEADING{
+  font-size: 1.4em;
+}
+
+nav img {
+  width: 50px !important;
+}
+
+li {
+  color: #ffffff;
+}
+
+@media only screen and (max-width: 663px) {
+  #MOBILE_LOGO{
+    display: none !important;
+  }
+}
+
+@media only screen and (max-width: 1183px) {
+  #HERO{
+    background-position: center top !important;
+    height: 20vh !important;
+    background-size" 100% !important;
+  }
+
+  #HEROHEADING{
+    font-size: 1em !important;
+    width: 80% !important;
+    text-align: left;
+  }
+
+  #HEROSUBHEADING{
+    font-size: .8em;
+  }
+
+ .kapandjaBasicSlides{
+    background-position: center top !important;
+    height: 20vh !important;
+    background-size" 100% !important;
+ }
+}
+</style><style>
+nav {
+  background-color: rgb(33,33,33);
+  border: thin solid rgba(0,0,0,0.05);
+}
+
+#LOGO{
+  width: 120px;
+}
+
+.navlink{
+  color: rgb(250,126,38) !important;
+  font-family: "Univers-Regular";
+}
+
+.active_nav {
+  color: rgb(255,255,255) !important;
+}
+
+#MOBILE_NAVIGATION, #MOBILE_LOGO{
+  display: none;
+}
+
+#MOBILE_NAVIGATION .btn.btn-link{
+  color: rgb(250,126,38) !important;
+}
+
+@media only screen and (max-width: 663px){
+  #NAVIGATION_BAR{
+    display: none
+  }
+
+  #MOBILE_LOGO{
+    width: 30px;
+    margin: 0 auto;
+  }
+
+  #MOBILE_NAVIGATION,#MOBILE_LOGO{
+    display: block;    
+  }
+
+}
+
+#HERO {
+  background-image: url("./cover.jpg");
+  height: 45vh;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  padding: 4em;
+}
+
+#HEROHEADING {
+  color: rgb(246,246,246) !important;
+  font-family: "Univers-Regular";
+}
+
+#HEROSUBHEADING{
+  color: rgb(217,217,217) !important;
+  font-family: "Univers-Regular";
+  text-shadow: 1px 1px 1px #000;
+}
+
+#HERO #HEROBTN{
+ border-color: rgb(33,33,33) !important;
+ background-color: rgb(33,33,33) !important;
+ font-family: "Univers-Regular";
+ border-radius: 0;
+}
+
+#HERO #HEROBTN a{
+ color: rgb(255,255,255) !important;
+}
+
+@media only screen and (max-width: 1183px){
+  #HERO {
+    height: 30vh; 
+  }
+
+  #HEROHEADING {
+    font-size: 1.1em;
+  }
+
+  #HERO {
+    padding: 2em;
+  }
+}
+
+@media only screen and (max-width: 397px){
+  #HERO {
+    height: 25vh;
+  }
+
+ #HEROBTN {
+    display: none;
+  }
+
+  #HEROSUBHEADING{
+    font-size: .8em;
+  }
+}
+
+@media only screen and (max-width: 335px){
+  #HERO {
+    height: 20vh;
+  }
+}
+
+@media only screen and (max-width: 274px){
+  #HERO {
+    height: 15vh;
+  }
+
+  #HEROSUBHEADING{
+    display: none
+  }
+}
+
+.basic-conent-section{
+  padding: 4em;
+  background-color: rgb(246,246,246);
+  font-family: "Univers-Regular";
+}
+
+.basic-conent-section #CONTENTHEADING {
+  color: rgb(250,126,38) !important;
+}
+
+.basic-conent-section img{
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border: thick solid rgb(33,33,33);
+}
+
+@media only screen and (max-width: 434px){
+  .basic-conent-section{
+    padding: 1em;
+  }
+  
+}
+
+.linkList{
+  padding: 4em;
+  padding-bottom: 4em;
+  background-color: rgb(33,33,33);
+  font-family: "Univers-Regular";
+}
+
+.linkList #LinkList {
+  color: rgb(250,126,38) !important;
+}
+
+.linkList img{
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border: thick solid rgb(250,126,38);
+}
+
+.linkList a {
+  color: rgb(255,255,255) !important;
+  text-decoration: underline;
+}
+
+@media only screen and (max-width: 434px){
+  .linkList{
+    padding: 1em;
+  }
+  
+}
+
+
+
+         .hiddenBasicSlide{
+           width: 0; display: none;
+           opacity: 0;
+         }
+         .selectedBasicSlide{
+           width: 100%;
+           display: block;
+           opacity: 1;
+         } #BASIC_SLIDE0 {
+  background-image: url("./kids.png");
+  height: 70vh;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  padding: 4em;
+  width: 100%;
+  opacity: 1;
+  transition: all .4s ease-out;
+}
+
+#BASIC_SLIDE_HEADING0 {
+  color: rgb(33,33,33) !important;
+  font-family: "Univers-Regular";
+}
+
+#BASIC_SLIDE_SUB_HEADING0{
+  color: rgb(217,217,217) !important;
+  font-family: "Univers-Regular";
+  text-shadow: 1px 1px 1px #000;
+}
+
+#BASIC_SLIDE_BUTTON0{
+ border-color: rgb(33,33,33) !important;
+ background-color: rgb(33,33,33) !important;
+ font-family: "Univers-Regular";
+ border-radius: 0;
+}
+
+#BASIC_SLIDE_BUTTON0 a{
+ color: rgb(255,255,255) !important;
+}
+
+@media only screen and (max-width: 1183px){
+  #BASIC_SLIDE {
+    height: 30vh;
+    padding: 2em;
+  }
+
+  #BASIC_SLIDE_HEADING0 {
+    font-size: 1.1em;
+  }
+
+}
+
+@media only screen and (max-width: 397px){
+  #BASIC_SLIDE0 {
+    height: 25vh;
+  }
+
+ #BASIC_SLIDE_BUTTON0 {
+    display: none;
+  }
+
+  #BASIC_SLIDE_SUB_HEADING0{
+    font-size: .8em;
+  }
+}
+
+@media only screen and (max-width: 335px){
+  #BASIC_SLIDE0 {
+    height: 20vh;
+  }
+}
+
+@media only screen and (max-width: 274px){
+  #BASIC_SLIDE0 {
+    height: 15vh;
+  }
+
+  #BASIC_SLIDE_SUB_HEADING0{
+    display: none
+  }
+}
+ #BASIC_SLIDE1 {
+  background-image: url("./cover.jpg");
+  height: 70vh;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  padding: 4em;
+  width: 100%;
+  opacity: 1;
+  transition: all .4s ease-out;
+}
+
+#BASIC_SLIDE_HEADING1 {
+  color: rgb(33,33,33) !important;
+  font-family: "Univers-Regular";
+}
+
+#BASIC_SLIDE_SUB_HEADING1{
+  color: rgb(217,217,217) !important;
+  font-family: "Univers-Regular";
+  text-shadow: 1px 1px 1px #000;
+}
+
+#BASIC_SLIDE_BUTTON1{
+ border-color: rgb(33,33,33) !important;
+ background-color: rgb(33,33,33) !important;
+ font-family: "Univers-Regular";
+ border-radius: 0;
+}
+
+#BASIC_SLIDE_BUTTON1 a{
+ color: rgb(255,255,255) !important;
+}
+
+@media only screen and (max-width: 1183px){
+  #BASIC_SLIDE {
+    height: 30vh;
+    padding: 2em;
+  }
+
+  #BASIC_SLIDE_HEADING1 {
+    font-size: 1.1em;
+  }
+
+}
+
+@media only screen and (max-width: 397px){
+  #BASIC_SLIDE1 {
+    height: 25vh;
+  }
+
+ #BASIC_SLIDE_BUTTON1 {
+    display: none;
+  }
+
+  #BASIC_SLIDE_SUB_HEADING1{
+    font-size: .8em;
+  }
+}
+
+@media only screen and (max-width: 335px){
+  #BASIC_SLIDE1 {
+    height: 20vh;
+  }
+}
+
+@media only screen and (max-width: 274px){
+  #BASIC_SLIDE1 {
+    height: 15vh;
+  }
+
+  #BASIC_SLIDE_SUB_HEADING1{
+    display: none
+  }
+}
+
+#ServicesContentWidget{
+  padding: 4em;
+  background-color: rgb(250,126,38);
+  font-family: "Univers-Regular";
+}
+
+#ServicesContentWidget h5{
+  color: rgb(9,18,44) !important;
+}
+
+#ServicesContentWidget .card{
+  background-color: rgb(250,126,38);
+  padding: .3em;
+  border: none;
+  text-align: center;
+}
+
+#ServicesContentWidget .card img{
+  width: 64px;
+  margin: 0 auto;
+}
+
+#ServicesContentWidget .card .card-title{
+  color: rgb(9,18,44);
+}
+
+@media only screen and (max-width: 434px){
+  #ServicesContentWidget .card img{
+    width: 34px;
+  }
+
+  #ServicesContentWidget{
+    padding: 1em;
+  }
+
+  .card-title{
+    font-size: .8em;
+  }
+}
+
+#BlogWidget0{
+  padding: 1em 4em;
+  background-color: rgb(246,246,246);
+  font-family: "Univers-Regular";
+  display: block;
+  width: 100%;
+}
+
+#BlogWidget0 #BlogArticle0 {
+  color: rgb(33,33,33) !important;
+}
+
+#BlogWidget0 h7 {
+  color: rgb(250,126,38)
+}
+
+#BlogWidget0 h3 {
+  color: rgb(128,128,128)
+}
+
+#BlogWidget0 img{
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border: thick solid rgb(33,33,33);
+}
+
+@media only screen and (max-width: 434px){
+  #BlogWidget0{
+    padding: 1em;
+  }  
+}
+
+#BlogWidget1{
+  padding: 1em 4em;
+  background-color: rgb(246,246,246);
+  font-family: "Univers-Regular";
+  display: block;
+  width: 100%;
+}
+
+#BlogWidget1 #BlogArticle1 {
+  color: rgb(33,33,33) !important;
+}
+
+#BlogWidget1 h7 {
+  color: rgb(250,126,38)
+}
+
+#BlogWidget1 h3 {
+  color: rgb(128,128,128)
+}
+
+#BlogWidget1 img{
+  border-top-left-radius: 50px;
+  border-bottom-right-radius: 50px;
+  border: thick solid rgb(33,33,33);
+}
+
+@media only screen and (max-width: 434px){
+  #BlogWidget1{
+    padding: 1em;
+  }  
+}
+
+#KAPANDJA_MAP_WIDGET #map{
+  height: 50vh;
+}
+
+#ContactWidget {
+  padding: 4em;
+  background-color: rgb(217,217,217);
+  font-family: "Univers-Regular";
+  color: rgb(33,33,33)
+}
+
+.contact-containers{
+  text-align: center;
+}
+
+#FooterWidget {
+  padding: 2em;
+  background-color: rgb(38,38,38);
+  font-family: "Univers-Regular";
+}
+
+.footer-containers li a{
+  color: rgb(250,126,38) !important;
+  text-decoration: underline;
+}
+
+.footer-containers li{
+  list-style: none;
+}
+
+.footer_about_text{
+  color: rgb(255,255,255) !important;
+}
+
+.footer_about_head{
+  color: rgb(255,255,255) !important;
+}
+
+.footer_developer_text{
+  color: rgb(0,255,255) !important;
+  text-decoration: underline;
+}
+
+.footer_developer_head{
+  color: rgb(128,128,128) !important;
+}
+</style><body><nav class="navbar" id="NAVIGATION_BAR"><section class="navbar-section"><a class="btn btn-link navlink active_nav" href="./index.html">Home</a><a class="btn btn-link navlink" href="./about.html">About</a><a class="btn btn-link navlink" href="./contact.html">Contact</a></section><section class="navbar-center"><img id="LOGO" src="./icons/ball-bearing.png"></img></section><section class="navbar-section"><a class="btn btn-link navlink" href="./projects.html">Projects</a><a class="btn btn-link navlink" href="./gallery.html">Gallery</a><a class="btn btn-link navlink" href="./blog.html">Blog</a></section></nav><div class="text-center"><img id="MOBILE_LOGO" src="./icons/ball-bearing.png"></img></div><div class="dropdown" id="MOBILE_NAVIGATION"><a class="btn btn-link dropdown-toggle" href="#"><i class="icon icon-menu"></i></a><ul class="menu"><li class="menu-item"><a class="btn btn-link navlink active_nav" href="./index.html">Home</a></li><li class="menu-item"><a class="btn btn-link navlink" href="./about.html">About</a></li><li class="menu-item"><a class="btn btn-link navlink" href="./contact.html">Contact</a></li><li class="menu-item"><a class="btn btn-link navlink" href="./projects.html">Projects</a></li><li class="menu-item"><a class="btn btn-link navlink" href="./gallery.html">Gallery</a></li><li class="menu-item"><a class="btn btn-link navlink" href="./blog.html">Blog</a></li></ul></div><section id="HERO"><h3 id="HEROHEADING">UNITED BY SKATEBOARDING NON-PROFIT ORGANIZATION</h3><p class="col-8 col-lg-4 col-md-8" id="HEROSUBHEADING">Build, Educate and Skate</p><button class="btn" id="HEROBTN"><a href="./explore.html">Donate</a></button></section><section class="basic-conent-section" id="CONTENT_BASIC"><h5 id="CONTENTHEADING">Who are we?</h5><div class="columns"><p class="col-6 col-sm-12">
+UNITED BY SKATEBOARDING is an None Governmental Organization (NGO).
+It was established in 202_ by Namibian street skateboarders, who
+skated (shredded) the rough Namibian terrain for many years... shredding
+pavements, basketball courts, malls, schools, churches, roads and
+hills (bombing hills in Windhoek)... Our experience however rad,
+showed us first hand how difficult it is to be a skateboarder in
+Namibia, it also showed us how skateboarding can be used as a vehicle
+for positive transformation within our local communities.
+We aim to build skateparks across the country especially
+in underprivileged communities that can benefit from skateboarding
+discipline and culture, thus we seek your support, collaboration and
+assistance to make our NGO project a success.</p><div class="col-1"></div><div class="col-5 col-sm-12"><img class="img-responsive" src="./group.png"></img></div></div></section><section class="linkList"><div class="columns"><div class="col-4 col-sm-12"><img class="img-responsive" src="./kids.png"></img></div><div class="col-1"></div><div class="col-7 col-sm-12"><h5 id="LinkList">Donate</h5><li><a href="dfjkdfjkdf">Our GoFundMe Page</a></li></div></div></section><section class="kapandjaBasicSlides selectedBasicSlide" id="BASIC_SLIDE0"><h3 id="BASIC_SLIDE_HEADING0">Oniipa Skatepark</h3><p class="col-8 col-lg-4 col-md-8" id="BASIC_SLIDE_SUB_HEADING0">Projects</p><button class="btn" id="BASIC_SLIDE_BUTTON0"><a href="./explore.html">View Project</a></button></section><section class="kapandjaBasicSlides hiddenBasicSlide" id="BASIC_SLIDE1"><h3 id="BASIC_SLIDE_HEADING1">Projects</h3><p class="col-8 col-lg-4 col-md-8" id="BASIC_SLIDE_SUB_HEADING1">Build, Skate and Unite</p><button class="btn" id="BASIC_SLIDE_BUTTON1"><a href="./explore.html">Press Here! To Donate</a></button></section><section id="ServicesContentWidget"><div class="columns"><div class="col-2 col-sm-4"><div class="card"><div class="card-image"><img class="img-responsive" src="./icons/brick-wall.png"></img></div><div class="card-header"><div class="card-title h6">Build</div></div></div></div><div class="col-2 col-sm-4"><div class="card"><div class="card-image"><img class="img-responsive" src="./icons/teamwork.png"></img></div><div class="card-header"><div class="card-title h6">Teamwork</div></div></div></div><div class="col-2 col-sm-4"><div class="card"><div class="card-image"><img class="img-responsive" src="./icons/communities.png"></img></div><div class="card-header"><div class="card-title h6">Community</div></div></div></div><div class="col-2 col-sm-4"><div class="card"><div class="card-image"><img class="img-responsive" src="./icons/child.png"></img></div><div class="card-header"><div class="card-title h6">Mentoring</div></div></div></div><div class="col-2 col-sm-4"><div class="card"><div class="card-image"><img class="img-responsive" src="./icons/motivation.png"></img></div><div class="card-header"><div class="card-title h6">Inspire</div></div></div></div><div class="col-2 col-sm-4"><div class="card"><div class="card-image"><img class="img-responsive" src="./icons/skateboarding.png"></img></div><div class="card-header"><div class="card-title h6">Skate</div></div></div></div></div></section><widget id="BlogWidget0"><h3>Latest News</h3><h5 id="BlogArticle0">Projects</h5><h7>27 Feb 2025</h7><div class="columns"><p class="col-6 col-sm-12">kddfjkd fdakjdas ddkfdfkjfd fkfkjdla dfkjdfkjdf kjfdkfj dfkjfdkjdf dfkjdfdfjkdf dfkjdfkjdf dfdfdkdfjk dfjkdfdfjkdf adfkjdfkajddf dfjifdljf ruiueru ,mcmcxmi diowqeiop 
+l;i dfjk</p><div class="col-1"></div><div class="col-5 col-sm-12"><img class="img-responsive" src="./cover.jpg"></img></div></div></widget><widget id="BlogWidget1"><h3>Latest News</h3><h5 id="BlogArticle1">Projects</h5><h7>27 Feb 2025</h7><div class="columns"><p class="col-6 col-sm-12">kddfjkd fdakjdas ddkfdfkjfd fkfkjdla dfkjdfkjdf kjfdkfj dfkjfdkjdf dfkjdfdfjkdf dfkjdfkjdf dfdfdkdfjk dfjkdfdfjkdf adfkjdfkajddf dfjifdljf ruiueru ,mcmcxmi diowqeiop 
+l;i dfjk</p><div class="col-1"></div><div class="col-5 col-sm-12"><img class="img-responsive" src="./cover.jpg"></img></div></div></widget><section id="KAPANDJA_MAP_WIDGET"><div id="map"></div></section><section id="ContactWidget"><div class="columns"><div class="col-4 col-sm-12 contact-containers"><h4><i class="fa fa-phone"></i></h4><h5>Phone</h5><h5>+264-81 xxx xxx</h5></div><div class="col-4 col-sm-12 contact-containers"><h4><i class="icon icon-mail"></i></h4><h5>Email</h5><h5>kdffdk@dfkfjkfdjk.org</h5></div><div class="col-4 col-sm-12 contact-containers"><h4><i class="fa fa-map-marker"></i></h4><h5>Location</h5><h5>Namibia</h5></div></div></section><section id="FooterWidget"><div class="columns"><div class="col-4 col-sm-12 footer-containers"><ul><li><a href="+264-81 4109 474">facebook</a></li><li><a href="info@awenempiregroupproperties.com">xTwitter</a></li><li><a href="Namibia">instagram</a></li></ul></div><div class="col-4 col-sm-12 footer-containers"><h4 class="footer_about_head">United By Skateboarding</h4><p class="footer_about_text">We aim to build skateparks across Namibia especially in underprivileged communities that can benefit from skateboarding discipline and culture, thus we seek your support, collaboration and assistance to make our NGO project a success.</p></div><div class="col-4 col-sm-12 footer-containers"><h6 class="footer_developer_head">hand coded (c) 2025 by</h6><a class="footer_developer_text" href="fdkfdjdk">Kwatafana</a></div></div></section></body><script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script><script>
+window.addEventListener("load", () =>{
+  setInterval(slide, 1800);
+
+  function slide(){
+     var slides = document.getElementsByClassName("kapandjaBasicSlides");
+     var selectedSlideIndex = document.getElementsByClassName("selectedBasicSlide")[0];
+     var currentSlideIndex = 0;
+
+     // Get current slide index
+     for( var i = 0; i < slides.length; i++) {
+       if(slides[i].classList.contains("selectedBasicSlide")){
+         currentSlideIndex = i;
+         break;
+       }
+     }
+
+     // Hide slides
+     for( var i = 0; i < slides.length; i++) {
+       slides[i].classList.remove("selectedBasicSlide");
+       slides[i].classList.add("hiddenBasicSlide");
+     }
+
+     // Set next slide
+     if(currentSlideIndex < (slides.length-1)){
+       slides[(currentSlideIndex+1)].classList.add("selectedBasicSlide");
+       slides[(currentSlideIndex + 1)].classList.remove("hiddenBasicSlide");
+     } else {
+       slides[0].classList.add("selectedBasicSlide");
+       slides[0].classList.remove("hiddenBasicSlide");
+     }
+  };
+})
+
+var map = L.map('map').setView([-22.568367, 17.072594], 13);
+
+L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    maxZoom: 19,
+    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+}).addTo(map);
+
+
+var markerIcon0 = L.icon({
+  iconUrl: "./logo.jpeg",
+  iconSize: [90, 50]
+});
+
+L.marker([-22.565708, 17.09188], {icon: markerIcon0}).addTo(map).bindPopup("For sale");
+
+var markerIcon1 = L.icon({
+  iconUrl: "./logo.jpeg",
+  iconSize: [90, 50]
+});
+
+L.marker([-22.57658, 17.04512], {icon: markerIcon1}).addTo(map).bindPopup("Available ror rent");
+
+var markerIcon2 = L.icon({
+  iconUrl: "./logo.jpeg",
+  iconSize: [90, 50]
+});
+
+L.marker([-22.564022, 17.062687], {icon: markerIcon2}).addTo(map).bindPopup("Available ror rent");
+
+</script></head>
